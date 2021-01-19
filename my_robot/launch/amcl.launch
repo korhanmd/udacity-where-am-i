@@ -13,4 +13,10 @@
     <param name="global_frame_id" value="map"/>
   </node>
 
+  <!-- Move Base -->
+  <node name="move_base" pkg="move_base" type="move_base" respawn="false" output="screen">
+    <remap from="scan" to="my_robot/laser/scan"/>
+    <param name="base_global_planner" value="navfn/NavfnROS" />
+    <param name="base_local_planner" value="base_local_planner/TrajectoryPlannerROS"/>
+  </node>
 </launch>
