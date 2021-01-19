@@ -4,4 +4,13 @@
   <arg name="map_file" default="$(find my_robot)/maps/korhan.yaml"/>
   <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />
 
+  <!-- AMCL Node -->
+  <node name="amcl" pkg="amcl" type="amcl" output="screen">
+    <remap from="scan" to="my_robot/laser/scan"/>
+    <param name="odom_frame_id" value="odom"/>
+    <param name="odom_model_type" value="diff-corrected"/>
+    <param name="base_frame_id" value="robot_footprint"/>
+    <param name="global_frame_id" value="map"/>
+  </node>
+
 </launch>
