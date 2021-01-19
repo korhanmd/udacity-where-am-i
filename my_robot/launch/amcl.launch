@@ -1,0 +1,7 @@
+<launch>
+
+  <!-- Map Server -->
+  <arg name="map_file" default="$(find my_robot)/maps/korhan.yaml"/>
+  <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />
+
+</launch>
