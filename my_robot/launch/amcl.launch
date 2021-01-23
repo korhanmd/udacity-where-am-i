@@ -14,6 +14,8 @@
     <param name="initial_pose_x" value="2"/>
     <param name="initial_pose_y" value="-12"/>
     <param name="initial_pose_a" value="-1.570"/>
+    <param name="update_min_d" value="0.1"/>
+    <param name="update_min_a" value="0.1"/>
   </node>
 
   <!-- Move Base -->
